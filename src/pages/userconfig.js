@@ -1,5 +1,5 @@
 import { Button, Dialog, Input, ListItem, Switch, useTheme } from '@rneui/themed';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import ApiContext from '../contexts/apicontext';
 
@@ -39,6 +39,12 @@ const Config = ( { setActive } ) => {
             secureTextEntry
         />
     </>;
+
+    useEffect ( ( ) => {
+        if ( viewConfigState.requireConfigurationBeforeAccess ) {
+            setViewConfig ( { ...viewConfigState, requireConfigurationBeforeAccess: false } );
+        } // A quick fix I forgot about
+    }, [ ] );
 
     return <Dialog 
         onBackdropPress={ ( ) => setActive ( false ) }

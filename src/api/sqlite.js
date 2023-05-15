@@ -8,9 +8,7 @@ const getDatabaseApi = ( ) => {
     const api = {
         db: database,
         run: ( closure, success ) => {
-            database.transaction ( closure, err => {
-                console.error ( err );
-            }, success );
+            database.transaction ( closure, databaseErrorHandler, success );
         }
     };
 
