@@ -56,6 +56,12 @@ const Config = ( { setActive } ) => {
         />
         <ListItem>
             <ListItem.Content>
+                <ListItem.Title>Show this on next start</ListItem.Title>
+                <Switch 
+                    value={ viewConfigState.requireConfigurationBeforeAccess } 
+                    onValueChange={ v => setViewConfig ( { ...viewConfigState, requireConfigurationBeforeAccess: v } ) }
+                    color={ theme.colors.secondary }
+                />
                 <ListItem.Title>Use dark theme</ListItem.Title>
                 <Switch 
                     value={ viewConfigState.useDarkTheme } 

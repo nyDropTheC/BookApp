@@ -12,8 +12,6 @@ const getConfig = async ( ) => {
         remoteBackendPath: '',
         useDarkTheme: true,
     }; // Default vars to initialize with
-
-    console.log ( 'BBBBBBBBBBBBBBBBBB', appConfig )
     
     const saveConfig = async ( ) => {
         try {

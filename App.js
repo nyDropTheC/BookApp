@@ -12,7 +12,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import getOpenAIAPI from './src/api/openai';
 import getFirebaseApi from './src/api/firebase';
-import getGoogleApi from './src/api/google';
 import getLibraryApi from './src/api/library';
 import getDatabaseApi from './src/api/sqlite';
 import getConfig from './src/api/config';
@@ -62,7 +61,6 @@ const App = () => {
 		getConfig ( )
 			.then ( configApi => {
 				const OpenAIAPI = getOpenAIAPI ( configApi );
-				const GoogleAPI = getGoogleApi ( configApi );
 				const FirebaseAPI = getFirebaseApi ( );
 				const SQLiteAPI = getDatabaseApi ( );
 				const LibraryAPI = getLibraryApi ( );
@@ -71,7 +69,6 @@ const App = () => {
 					openai: OpenAIAPI,
 					firebase: FirebaseAPI,
 					database: SQLiteAPI,
-					google: GoogleAPI,
 					library: LibraryAPI,
 					config: configApi
 				} );
