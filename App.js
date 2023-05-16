@@ -1,3 +1,6 @@
+import 'react-native-gesture-handler';
+// This fixes a problem not present in development mode, but crashing the app in .apk
+
 import { ThemeProvider, createTheme, useThemeMode } from '@rneui/themed';
 import { useEffect, useState } from 'react';
 
