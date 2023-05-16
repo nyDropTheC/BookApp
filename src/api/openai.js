@@ -1,11 +1,8 @@
 const getOpenAIAPI = ( appcfg ) => {
-    console.log ( 'CCCCCCCCCCCCCCCCCCCC', typeof ( appcfg ) );
-    
     // If we're using the OpenAI provider backend (as a proper application should do), 
     // call on the backend server to keep our API key secure
     // However, if we're just building a toy app (as we are), 
     // use a simpler variation that directly calls upon OpenAI servers from an API key the user supplies
-    
 
     const { useMockBackendApi, userOpenAiKey, remoteBackendPath } = appcfg.config;
 
